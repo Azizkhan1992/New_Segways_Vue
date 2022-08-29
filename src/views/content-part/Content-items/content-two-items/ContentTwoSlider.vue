@@ -1,6 +1,6 @@
 <template>
     <div class="two-slider-container">
-
+        
     </div>
 </template>
 <script>

@@ -5,12 +5,7 @@
         :class="header.active ? 'header-active' : 'header-deactive'"
       >
         <button @click="setProgresTab(header.value)">
-          <img
-            :src="
-              require('@/assets/Content/ContentThree/' + header.img + '.svg')
-            "
-            alt=""
-          />
+          <svg width="38" height="37" viewBox="0 0 38 37" fill="currentcolor" xmlns="http://www.w3.org/2000/svg" v-html="header.svg"></svg>
           <div class="header-title">{{ header.title }}</div>
           
         </button>

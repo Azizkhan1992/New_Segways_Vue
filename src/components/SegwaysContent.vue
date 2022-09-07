@@ -6,6 +6,10 @@
         <segways-content-four/>
         <segways-content-five/>
         <segways-content-six/>
+        <segways-content-seven/>
+        <segways-content-eight/>
+        <segways-content-nine/>
+        <segways-content-ten/>
     </div>
 </template>
 <script>
@@ -15,6 +19,10 @@
     import SegwaysContentFour from '@/views/content-part/SegwaysContentFour.vue';
     import SegwaysContentFive from '@/views/content-part/SegwaysContentFive.vue';
     import SegwaysContentSix from '@/views/content-part/SegwaysContentSix.vue';
+    import SegwaysContentSeven from '@/views/content-part/SegwaysContentSeven.vue';
+    import SegwaysContentEight from '@/views/content-part/SegwaysContentEight.vue';
+    import SegwaysContentNine from '@/views/content-part/SegwaysContentNine.vue';
+    import SegwaysContentTen from '@/views/content-part/SegwaysContentTen.vue';
     export default{
         name: 'segways-content',
         components:{
@@ -23,7 +31,11 @@
             SegwaysContentThree,
             SegwaysContentFour,
             SegwaysContentFive,
-            SegwaysContentSix
+            SegwaysContentSix,
+            SegwaysContentSeven,
+            SegwaysContentEight,
+            SegwaysContentNine,
+            SegwaysContentTen
         }
     }
 </script>

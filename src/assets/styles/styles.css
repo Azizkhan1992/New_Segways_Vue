@@ -1678,7 +1678,7 @@ body {
   bottom: 20px;
   /* left: 0; */
   display: block;
-  animation: SlideIn 1s ease-in;
+  animation: SlideIn1 1s ease-in;
 }
 .two-slider-container .slider-wrapper .left {
   position: absolute;
@@ -1686,7 +1686,7 @@ body {
   height: 90%;
   bottom: 20px;
   display: block;
-  animation: SlideOut 4s ease-in;
+  animation: SlideOut1 4s ease-in;
 }
 .two-slider-container .slider-wrapper .left img {
   width: 530px;
@@ -1712,7 +1712,7 @@ body {
   background: #009eff;
 }
 
-@keyframes SlideIn {
+@keyframes SlideIn1 {
   0% {
     margin-left: 100%;
   }
@@ -1721,7 +1721,7 @@ body {
   }
 }
 
-@keyframes SlideOut {
+@keyframes SlideOut1 {
   0% {
     margin-left: 0;
   }
@@ -3577,6 +3577,35 @@ body {
   top: 285px;
   left: 365px;
 }
+.nine-bottom .nine-bottom-content .nine-bottom-img{
+  position: relative;
+}
+.nine-bottom .nine-bottom-content .nine-bottom-img .bottom-circle-one{
+  position: absolute;
+  top: 28.15%;
+  left: 17.85%;
+  animation: Vibrate 1s linear infinite;
+}
+.nine-bottom .nine-bottom-content .nine-bottom-img .bottom-circle-two{
+  position: absolute;
+  top: 1.5%;
+  right: 17.85%;
+  bottom: 0;
+  animation: Vibrate 1s linear infinite;
+}
+
+@keyframes Vibrate{
+  0%{
+    transform: rotate(-45deg) scale(1.25);
+  }
+  50%{
+    transform: rotate(-45deg) scale(1.15);
+  }
+  100%{
+    transform: rotate(-45deg) scale(1);
+  }
+}
+
 
 /* Content Ten */
 
@@ -3653,11 +3682,12 @@ body {
   background: transparent;
 }
 .content-ten-container .content-ten-bottom .ten-items .ten-bottom-circle {
-  width: 80px;
-  height: 110px;
+  width: 50px;
+  height: 80px;
   background: #ffffff;
   position: absolute;
-  bottom: -30px;
+  bottom: 5px;
+  left: 5px;
   transform: rotate(-10deg);
   filter: blur(35px);
 }
@@ -3690,4 +3720,664 @@ body {
   color: #323941;
   display: block;
   width: 65%;
+}
+
+
+
+
+/* Content Elewen */
+
+.segways-content-container .content-elewen-container{
+  width: 100%;
+  height: 1100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.content-elewen-container .elewen-top-content{
+  width: 100%;
+  height: 545px;
+  background: url('@/assets/Content/ContentElewen/bgImage.svg') #17223A;
+  background-repeat: no-repeat;
+  background-position: right;
+  position: relative;
+}
+.content-elewen-container .elewen-top-content .elewen-top-items{
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.content-elewen-container .elewen-top-content .elewen-top-circle{
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  position: absolute;
+  left: -300px;
+  top: 100px;
+  background: #3a75f7;
+  opacity: 0.2;
+  filter: blur(300px);
+}
+.content-elewen-container .elewen-top-content .elewen-top-items h1{
+  font-size: 3.25rem;
+  font-style: normal;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #ffffff;
+  line-height: 120%;
+  width: 75%;
+}
+.content-elewen-container .elewen-top-content .elewen-top-items span{
+  font-size: 1.15rem;
+  font-style: normal;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 22px;
+  display: block;
+  width: 35%;
+}
+
+.content-elewen-container .elewen-bottom-content{
+  width: 100%;
+  height: 495px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  background: #f5f5f5;
+}
+.content-elewen-container .elewen-bottom-content .elewen-bottom-items{
+  width: 90%;
+  height: 63.63%;
+  background: #ffffff;
+  border: 5px solid #009eff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+}
+.elewen-bottom-content .elewen-bottom-items .bottom-img{
+  position: relative;
+  width: 35%;
+  height: 100%;
+}
+.elewen-bottom-content .elewen-bottom-items .bottom-img .elewen-bottom-img{
+  position: absolute;
+  left: -40.87%;
+  top: -8%;
+}
+.elewen-bottom-content .elewen-bottom-items .bottom-item-title{
+  width: 75%;
+  height: 100%;
+  padding-left: 25px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.elewen-bottom-content .elewen-bottom-items .bottom-item-title h1{
+  font-size: 3.25rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 120%;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 15px;
+  width: 50%;
+}
+.elewen-bottom-content .elewen-bottom-items .bottom-item-title button{
+  width: 29.45%;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-around;
+  background: #009eff;
+  border: 5px solid #009eff;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 19px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all .25s ease-out;
+  margin-top: 30px;
+}
+.elewen-bottom-content .elewen-bottom-items .bottom-item-title button:hover{
+  background: #ffffff;
+  color: #009eff;
+  transform: scale(1.05) translateY(-2px);
+  transition: all .25s ease-in;
+}
+.elewen-bottom-content .elewen-bottom-items .bottom-item-title .title-items{
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+}
+.elewen-bottom-items .bottom-item-title .title-items .items{
+  width: 33%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+}
+.elewen-bottom-items .bottom-item-title .title-items .items h4{
+  font-size: 1rem;
+  margin: 0;
+  margin-left: 10px;
+  font-style: normal;
+  line-height: 120%;
+  font-weight: 400;
+  color: #323941;
+  width: 65%;
+}
+
+
+
+
+
+/* Content Twelwe Slider */
+
+.segways-content-container .content-twelwe-container{
+  width: 100%;
+  height: 1700px;
+  margin-top: 60px;
+}
+.content-twelwe-container .twelwe-content{
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.content-twelwe-container .twelwe-content .twelwe-header{
+  width: 100%;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+.twelwe-content .twelwe-header h1{
+  font-size: 3.25rem;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 60px;
+  color: #323941;
+  margin: 0;
+  margin: 15px 0 15px 0;
+}
+.twelwe-content .twelwe-header span{
+  font-size: 1.15rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  color: #323941;
+}
+
+.content-twelwe-container .twelwe-content .twelwe-slider{
+  width: 3200px;
+  height: 1525px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 55px;
+  overflow: hidden;
+  position: relative;
+}
+.twelwe-content .twelwe-slider .slider-item{
+  width: 10%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.twelwe-content .twelwe-slider .active{
+  animation: SlideIn 1s ease-in;
+}
+.twelwe-content .twelwe-slider .left{
+  animation: SlideOut 1s ease-out;
+  position: absolute;
+  right: 0;
+}
+@keyframes SlideIn{
+  0%{
+    margin-left: 10%;
+  }
+  100%{
+    margin-left: 0;
+  }
+}
+@keyframes SlideOut{
+  0%{
+    margin-left: 0;
+  }
+  100%{
+    margin-left: -5%;
+  }
+}
+.twelwe-content .twelwe-slider .slider-item img{
+  width: 66.5%;
+  height: 12.65%;
+}
+.twelwe-content .twelwe-slider .slider-item hr{
+  width: 100%;
+}
+.twelwe-content .twelwe-slider .slider-item p{
+  font-size: 1.15rem;
+  line-height: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: 95%;
+  color: #323941;
+}
+.twelwe-content .twelwe-slider .slider-item span{
+  font-size: 1.15rem;
+  line-height: 22px;
+  font-weight: 400;
+  color: #323941;
+}
+.twelwe-content .twelwe-slider .slider-item .speed-title-active{
+  width: 75%;
+  height: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  margin-top: 10px;
+}
+.twelwe-content .twelwe-slider .slider-item .speed-title-deactive{
+  visibility: hidden;
+  width: 75%;
+  height: 24px;
+  margin-top: 10px;
+}
+.twelwe-content .twelwe-slider .slider-item .speed-title-active img{
+  width: 20px;
+  height: 18px;
+  margin-right: 5px;
+}
+.twelwe-content .twelwe-slider .slider-item .speed-title-active span{
+  font-size: 1rem;
+  line-height: 24px;
+  font-weight: 400;
+  color: #009eff;
+}
+.twelwe-content .twelwe-slider .slider-item .range-title-active{
+  width: 75%;
+  height: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-items: flex-start;
+  margin-top: 20px;
+}
+.twelwe-content .twelwe-slider .slider-item .range-title-deactive{
+  width: 75%;
+  height: 24px;
+  visibility: hidden;
+  margin-top: 20px;
+}
+.twelwe-content .twelwe-slider .slider-item .range-title-active img{
+  width: 20px;
+  height: 18px;
+  margin-right: 5px;
+}
+.twelwe-content .twelwe-slider .slider-item .range-title-active span{
+  font-size: 1rem;
+  line-height: 24px;
+  font-weight: 400;
+  color: #009eff;
+}
+.twelwe-content .twelwe-slider .slider-item .battery-title-active{
+  width: 75%;
+  height: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-items: flex-start;
+  margin-top: 20px;
+}
+.twelwe-content .twelwe-slider .slider-item .battery-title-deactive{
+  width: 75%;
+  height: 24px;
+  visibility: hidden;
+  margin-top: 20px;
+}
+.twelwe-content .twelwe-slider .slider-item .battery-title-active img{
+  width: 20px;
+  height: 18px;
+  margin-right: 5px;
+}
+.twelwe-content .twelwe-slider .slider-item .battery-title-active span{
+  font-size: 1rem;
+  line-height: 24px;
+  font-weight: 400;
+  color: #009eff;
+}
+.twelwe-content .twelwe-slider .slider-item .weight-title-active{
+  width: 75%;
+  height: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  margin-top: 20px;
+}
+.twelwe-content .twelwe-slider .slider-item .weight-title-deactive{
+  width: 75%;
+  height: 24px;
+  visibility: hidden;
+  margin-top: 20px;
+}
+.twelwe-content .twelwe-slider .slider-item .weight-title-active img{
+  width: 20px;
+  height: 18px;
+  margin-right: 5px;
+}
+.twelwe-content .twelwe-slider .slider-item .weight-title-active span{
+  font-size: 1rem;
+  line-height: 24px;
+  font-weight: 400;
+  color: #009eff;
+}
+.twelwe-content .twelwe-slider .slider-item .payload-title-active{
+  width: 75%;
+  height: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  margin-top: 20px;
+}
+.twelwe-content .twelwe-slider .slider-item .payload-title-deactive{
+  width: 75%;
+  height: 24px;
+  visibility: hidden;
+  margin-top: 20px;
+}
+.twelwe-content .twelwe-slider .slider-item .payload-title-active img{
+  width: 20px;
+  height: 18px;
+  margin-right: 5px;
+}
+.twelwe-content .twelwe-slider .slider-item .payload-title-active span{
+  font-size: 1rem;
+  line-height: 24px;
+  font-weight: 400;
+  color: #009eff;
+}
+.twelwe-content .twelwe-slider .slider-item .time-title-active{
+  width: 75%;
+  height: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  margin-top: 20px;
+}
+.twelwe-content .twelwe-slider .slider-item .time-title-deactive{
+  width: 75%;
+  height: 24px;
+  visibility: hidden;
+  margin-top: 20px;
+}
+.twelwe-content .twelwe-slider .slider-item .time-title-active img{
+  width: 20px;
+  height: 18px;
+  margin-right: 5px;
+}
+.twelwe-content .twelwe-slider .slider-item .time-title-active span{
+  font-size: 1rem;
+  line-height: 24px;
+  font-weight: 400;
+  color: #009eff;
+}
+.twelwe-content .twelwe-slider .slider-item .time-title-active{
+  font-size: 1.25rem;
+  line-height: 24px;
+  font-weight: 400;
+  color: #009eff;
+}
+.twelwe-content .twelwe-slider .slider-item .num-title-active{
+  width: 85%;
+  height: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  margin-top: 20px;
+}
+.twelwe-content .twelwe-slider .slider-item .num-title-deactive{
+  width: 75%;
+  height: 24px;
+  visibility: hidden;
+  margin-top: 20px;
+}
+.twelwe-content .twelwe-slider .slider-item .num-title-active img{
+  width: 20px;
+  height: 18px;
+  margin-right: 5px;
+}
+.twelwe-content .twelwe-slider .slider-item .num-title-active span{
+  font-size: 1rem;
+  line-height: 24px;
+  font-weight: 400;
+  color: #009eff;
+}
+.twelwe-content .twelwe-slider .slider-item .motor-title-active{
+  width: 75%;
+  height: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  margin-top: 20px;
+}
+.twelwe-content .twelwe-slider .slider-item .motor-title-deactive{
+  width: 75%;
+  height: 24px;
+  visibility: hidden;
+  margin-top: 20px;
+}
+.twelwe-content .twelwe-slider .slider-item .motor-title-active img{
+  width: 20px;
+  height: 18px;
+  margin-right: 5px;
+}
+.twelwe-content .twelwe-slider .slider-item .motor-title-active span{
+  font-size: 1rem;
+  line-height: 24px;
+  font-weight: 400;
+  color: #009eff;
+}
+.twelwe-content .twelwe-slider .slider-item .power-title-active{
+  width: 75%;
+  height: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  margin-top: 20px;
+}
+.twelwe-content .twelwe-slider .slider-item .power-title-deactive{
+  width: 75%;
+  height: 24px;
+  visibility: hidden;
+  margin-top: 20px;
+}
+.twelwe-content .twelwe-slider .slider-item .power-title-active img{
+  width: 20px;
+  height: 18px;
+  margin-right: 5px;
+}
+.twelwe-content .twelwe-slider .slider-item .power-title-active span{
+  font-size: 1rem;
+  line-height: 24px;
+  font-weight: 400;
+  color: #009eff;
+}
+.twelwe-content .twelwe-slider .slider-item .incline-title-active{
+  width: 75%;
+  height: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  margin-top: 20px;
+}
+.twelwe-content .twelwe-slider .slider-item .incline-title-deactive{
+  width: 75%;
+  height: 24px;
+  visibility: hidden;
+  margin-top: 20px;
+}
+.twelwe-content .twelwe-slider .slider-item .incline-title-active img{
+  width: 20px;
+  height: 18px;
+  margin-right: 5px;
+}
+.twelwe-content .twelwe-slider .slider-item .incline-title-active span{
+  font-size: 1rem;
+  line-height: 24px;
+  font-weight: 400;
+  color: #009eff;
+}
+.twelwe-content .twelwe-slider .slider-item .shock-title-active{
+  width: 75%;
+  height: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  margin-top: 20px;
+}
+.twelwe-content .twelwe-slider .slider-item .shock-title-deactive{
+  width: 75%;
+  height: 24px;
+  visibility: hidden;
+  margin-top: 20px;
+}
+.twelwe-content .twelwe-slider .slider-item .shock-title-active img{
+  width: 20px;
+  height: 18px;
+  margin-right: 5px;
+}
+.twelwe-content .twelwe-slider .slider-item .shock-title-active span{
+  font-size: 1rem;
+  line-height: 24px;
+  font-weight: 400;
+  color: #009eff;
+}
+.twelwe-content .twelwe-slider .slider-item .safety-title-active{
+  width: 75%;
+  height: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  margin-top: 20px;
+}
+.twelwe-content .twelwe-slider .slider-item .safety-title-deactive{
+  width: 75%;
+  height: 24px;
+  visibility: hidden;
+  margin-top: 20px;
+}
+.twelwe-content .twelwe-slider .slider-item .safety-title-active img{
+  width: 20px;
+  height: 18px;
+  margin-right: 5px;
+}
+.twelwe-content .twelwe-slider .slider-item .safety-title-active span{
+  font-size: 1rem;
+  line-height: 24px;
+  font-weight: 400;
+  color: #009eff;
+}
+.twelwe-content .twelwe-slider .slider-item .light-title-active{
+  width: 75%;
+  height: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  margin-top: 20px;
+}
+.twelwe-content .twelwe-slider .slider-item .light-title-deactive{
+  width: 75%;
+  height: 24px;
+  visibility: hidden;
+  margin-top: 20px;
+}
+.twelwe-content .twelwe-slider .slider-item .light-title-active img{
+  width: 20px;
+  height: 18px;
+  margin-right: 5px;
+}
+.twelwe-content .twelwe-slider .slider-item .light-title-active span{
+  font-size: 1rem;
+  line-height: 24px;
+  font-weight: 400;
+  color: #009eff;
+}
+.twelwe-content .twelwe-slider .slider-item h4{
+  font-size: 1.5rem;
+  line-height: 23px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #323941;
+  margin: 0;
+  margin: 50px 0 25px 17%;
+}
+.twelwe-content .twelwe-slider .slider-item button{
+  width: 59.35%;
+  height: 45px;
+  font-weight: 700;
+  font-size: 1.15rem;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #009eff;
+  border: none;
+  cursor: pointer;
+  margin-left: 5px;
+  transition: all .25s ease-out;
+}
+.twelwe-content .twelwe-slider .slider-item button:hover{
+  background: #ffffff;
+  color: #009eff;
+  border: 2px solid #009eff;
+  transform: scale(1.05) translateY(-2px);
+  transition: all .25s ease-in;
+}
+.twelwe-content .twelwe-slider .twelwe-right-btn{
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  border: none;
+  position: absolute;
+  right: 60.5%;
+  top: 50.5%;
+  cursor: pointer;
+  padding: 0;
+}
+.twelwe-content .twelwe-slider .twelwe-right-btn svg{
+  width: 100%;
+  height: 100%;
+}
+.twelwe-content .twelwe-slider .twelwe-right-btn svg path:first-child{
+  fill: #ffffff;
+}
+.twelwe-content .twelwe-slider .twelwe-right-btn svg path:nth-child(2){
+  fill: #009eff;
+}
+.twelwe-content .twelwe-slider .twelwe-right-btn svg path:nth-child(3){
+  fill: #009eff;
+}
+.twelwe-content .twelwe-slider .twelwe-right-btn:hover svg path:first-child{
+  fill: #009eff;
+}
+.twelwe-content .twelwe-slider .twelwe-right-btn:hover svg path:nth-child(2){
+  fill: #ffffff;
+}
+.twelwe-content .twelwe-slider .twelwe-right-btn:hover svg path:nth-child(3){
+  fill: #ffffff;
 }

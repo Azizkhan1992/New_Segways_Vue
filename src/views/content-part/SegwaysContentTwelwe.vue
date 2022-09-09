@@ -6,7 +6,7 @@
         <span>Add model to compare</span>
       </div>
       <div class="twelwe-slider">
-        <button class="twelwe-right-btn" @click="runSlide">
+        <button class="twelwe-right-btn" @click="runSlide" :disabled="slide_item_active">
           <svg
             width="70"
             height="71"
@@ -28,12 +28,13 @@
             />
           </svg>
         </button>
+        <div class="twelwe-transparent"></div>
         <div
           class="slider-item"
           v-for="slide in slider_items"
           :key="slide.id"
           :id="slide.id"
-          :class="id_checker == slide.id ? 'active' : '' || id_checker_left == slide.id ? 'left' : ''"
+          :class="{'active' : id_checker == slide.id  ,'active-left' :  slide_item_active && id_checker == slide.id }"
         >
           <img
             :src="
@@ -54,7 +55,7 @@
             <span>Max. speed</span>
           </div>
           <hr />
-          <span>{{ slide.max_speed }}</span>
+          <span class="slide-item-span">{{ slide.max_speed }}</span>
           <div
             :class="
               slide.active ? 'range-title-active' : 'range-title-deactive'
@@ -67,7 +68,7 @@
             <span>Range (miles)</span>
           </div>
           <hr />
-          <span>{{ slide.range }}</span>
+          <span class="slide-item-span">{{ slide.range }}</span>
           <div
             :class="
               slide.active ? 'battery-title-active' : 'battery-title-deactive'
@@ -80,7 +81,7 @@
             <span>Battery Capacity</span>
           </div>
           <hr />
-          <span>{{ slide.battery_cap }}</span>
+          <span class="slide-item-span">{{ slide.battery_cap }}</span>
           <div
             :class="
               slide.active ? 'weight-title-active' : 'weight-title-deactive'
@@ -91,9 +92,10 @@
               alt=""
             />
             <span>Net Weight</span>
+            
           </div>
           <hr />
-          <span>{{ slide.net_weight }}</span>
+          <span class="slide-item-span">{{ slide.net_weight }}</span>
           <div
             :class="
               slide.active ? 'payload-title-active' : 'payload-title-deactive'
@@ -106,7 +108,7 @@
             <span>Payload</span>
           </div>
           <hr />
-          <span>{{ slide.payload }}</span>
+          <span class="slide-item-span">{{ slide.payload }}</span>
           <div
             :class="slide.active ? 'time-title-active' : 'time-title-deactive'"
           >
@@ -117,7 +119,7 @@
             <span>Chargin Time</span>
           </div>
           <hr />
-          <span>{{ slide.charge_time }}</span>
+          <span class="slide-item-span">{{ slide.charge_time }}</span>
           <div
             :class="slide.active ? 'num-title-active' : 'num-title-deactive'"
           >
@@ -128,7 +130,7 @@
             <span>Number of Batteries</span>
           </div>
           <hr />
-          <span>{{ slide.num_battery }}</span>
+          <span class="slide-item-span">{{ slide.num_battery }}</span>
           <div
             :class="
               slide.active ? 'motor-title-active' : 'motor-title-deactive'
@@ -141,7 +143,7 @@
             <span>Motor power</span>
           </div>
           <hr />
-          <span>{{ slide.motor_power }}</span>
+          <span class="slide-item-span">{{ slide.motor_power }}</span>
           <div
             :class="
               slide.active ? 'power-title-active' : 'power-title-deactive'
@@ -154,7 +156,7 @@
             <span>Power Output</span>
           </div>
           <hr />
-          <span>{{ slide.power_out }}</span>
+          <span class="slide-item-span">{{ slide.power_out }}</span>
           <div
             :class="
               slide.active ? 'incline-title-active' : 'incline-title-deactive'
@@ -167,7 +169,7 @@
             <span>Max. Incline</span>
           </div>
           <hr />
-          <span>{{ slide.max_incline }}</span>
+          <span class="slide-item-span">{{ slide.max_incline }}</span>
           <div
             :class="
               slide.active ? 'shock-title-active' : 'shock-title-deactive'
@@ -180,7 +182,7 @@
             <span>Shock Absorption</span>
           </div>
           <hr />
-          <span>{{ slide.shock_abs }}</span>
+          <span class="slide-item-span">{{ slide.shock_abs }}</span>
           <div
             :class="
               slide.active ? 'safety-title-active' : 'safety-title-deactive'
@@ -193,7 +195,7 @@
             <span>Safety</span>
           </div>
           <hr />
-          <span>{{ slide.safety }}</span>
+          <span class="slide-item-span">{{ slide.safety }}</span>
           <div
             :class="
               slide.active ? 'light-title-active' : 'light-title-deactive'
@@ -206,7 +208,7 @@
             <span>Atmosphere Light</span>
           </div>
           <hr />
-          <span>{{ slide.atmosphere_light }}</span>
+          <span class="slide-item-span">{{ slide.atmosphere_light }}</span>
           <h4>{{ slide.price }}</h4>
           <button>BUY IT NOW</button>
         </div>
@@ -221,6 +223,7 @@ export default {
     return {
         id_checker: 1,
         id_checker_left: 1,
+        slide_item_active: false,
       slider_items: [
         {
           id: 1,
@@ -418,10 +421,19 @@ export default {
   },
   methods: {
     runSlide(){
-        let first_item = this.slider_items.shift()
+
+      this.slide_item_active = true
+       setTimeout(()=>{
+      this.slideDelay()
+      this.slide_item_active = false
+       }, 1500)
+            
+       
+    },
+    slideDelay(){
+      let first_item = this.slider_items.shift()
             this.slider_items.push(first_item)
             this.id_checker_left = first_item.id
-            
 
         if(this.id_checker == this.slider_items.length){
             this.id_checker = 1

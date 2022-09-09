@@ -12,6 +12,8 @@
         <segways-content-ten/>
         <segways-content-elewen/>
         <segways-content-twelwe/>
+        <segways-content-threeten/>
+        <segways-content-fourten/>
     </div>
 </template>
 <script>
@@ -27,6 +29,8 @@
     import SegwaysContentTen from '@/views/content-part/SegwaysContentTen.vue';
     import SegwaysContentElewen from '@/views/content-part/SegwaysContentElewen.vue';
     import SegwaysContentTwelwe from '@/views/content-part/SegwaysContentTwelwe.vue';
+    import SegwaysContentThreeten from '@/views/content-part/SegwaysContentThreeten.vue';
+    import SegwaysContentFourten from '@/views/content-part/SegwaysContentFourten.vue';
     export default{
         name: 'segways-content',
         components:{
@@ -41,7 +45,9 @@
             SegwaysContentNine,
             SegwaysContentTen,
             SegwaysContentElewen,
-            SegwaysContentTwelwe
+            SegwaysContentTwelwe,
+            SegwaysContentThreeten,
+            SegwaysContentFourten
         }
     }
 </script>

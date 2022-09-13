@@ -1,6 +1,7 @@
 <template>
   <div class="seven-bottom-item">
-    <h1>KickScooter overview SEGWAY Ninebot Kickscooter MAX</h1>
+    <div class="seven-bottom-content">
+      <h1>KickScooter overview SEGWAY Ninebot Kickscooter MAX</h1>
       <svg
         width="958"
         height="561"
@@ -409,6 +410,7 @@
           />
         </defs>
       </svg>
+    </div>
   </div>
 </template>
 <script>

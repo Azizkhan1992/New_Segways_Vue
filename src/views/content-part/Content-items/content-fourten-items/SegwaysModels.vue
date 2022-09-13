@@ -148,9 +148,7 @@ export default {
       let num = evt.target.value
       if(num && this.phone_number.length == 12){
         let part = this.phone_number.split("")
-        for(let i=0; i<=part.length-1; i++){
-          console.log(part[i])
-        }
+         console.log(part)
       }
     }
   }

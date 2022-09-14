@@ -3,7 +3,7 @@
     <div class="left-items-title">
       <p>
         Payment Methods: <i class="left-item-one">Starting at $55/mo with </i>
-        <img src="@/assets/Content/ContentTwo/Logo.svg" alt="" />.
+        <img src="@/assets/Content/ContentTwo/Logo.svg" alt="" />
         <i class="left-item-two">Prequalify now</i>
       </p>
     </div>
@@ -68,6 +68,13 @@
       <a href="#" class="two-icon-sixten">
         <img src="@/assets/Content/ContentTwo/Vector 14.svg" alt="" />
       </a>
+    </div>
+    <div class="mobile-payment-title">
+      <p>
+        Starting at $55/mo with
+        <img src="@/assets/Content/ContentTwo/Logo.svg" alt="" />. <i> Prequalify
+        now</i>
+      </p>
     </div>
   </div>
 </template>

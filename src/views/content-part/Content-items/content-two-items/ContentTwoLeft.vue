@@ -4,13 +4,35 @@
       <a href="#">In stock</a>
       <h1>SEGWAY Ninebot Kickscooter MAX</h1>
     </div>
+    <div class="two-mobile-extends">
+      <div class="two-mobile-title">
+        <h1>Segway Protective Gear Set <i>as a gift</i></h1>
+        <span
+          >The cost of a protection kit when buying a scooter is $0 instead of
+          $29.99</span
+        >
+      </div>
+      <img src="@/assets/Content/ContentTwo/TwoMobile/image.svg" alt="" />
+    </div>
     <div class="two-extends-input">
       <div class="extends-inputs">
         <h5>Add an extended warranty from <i>Extend</i></h5>
         <div class="input-items">
-          <input type="text" placeholder="1 Year - $139" />
-          <input type="text" placeholder="2 Year - $209" />
-          <input type="text" placeholder="3 Year - $279" />
+          <button>1 Year - $139</button>
+          <button>2 Year - $209</button>
+          <button>3 Year - $279</button>
+          <button class="two-left-mobile">
+            <p>1 Year</p>
+            <i> $139</i>
+          </button>
+          <button class="two-left-mobile">
+            <p>2 Year</p>
+            <i> $209</i>
+          </button>
+          <button class="two-left-mobile">
+            <p>3 Year</p>
+            <i> $279</i>
+          </button>
         </div>
       </div>
       <div class="extends-price">

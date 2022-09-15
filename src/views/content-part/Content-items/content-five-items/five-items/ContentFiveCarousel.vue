@@ -2,13 +2,12 @@
   <div class="five-carousel-container">
     <div class="five-carousel-content">
       <div class="five-carousel-wrapper">
-        <p>{{carouselActive}}</p>
         <div
           class="five-carousel-items"
           v-for="slide in five_carousel"
           :key="slide.id"
           :id="slide.id"
-          :class="{'carousel-active' : carouselActive && slide.id == currentId}"
+          :class="{'carousel-active' : slide.id == currentId , 'carousel-left' : slide.id == leftId }"
         >
           <div class="carousel-circle">
             <img
@@ -28,12 +27,13 @@
   </div>
 </template>
 <script>
+
 export default {
   name: "five-carousel",
   data() {
     return {
         currentId: 1,
-        carouselActive: false,
+        leftId: 1,
       five_carousel: [
         {
           id: 1,
@@ -115,17 +115,21 @@ export default {
   },
   methods: {
     moveSlide() {
+      this.leftId = this.five_carousel.length
         setInterval(() => {
-            this.carouselActive = true
           if(this.currentId <=this.five_carousel.length-1){
             this.currentId++
           }else{
             this.currentId=1
           }
-        let item = this.five_carousel.shift();
-        this.five_carousel.push(item);
+          if(this.leftId >= this.five_carousel.length){
+            this.leftId = 1
+          }else{
+            this.leftId++
+          }
+          let item = this.five_carousel.shift();
+          this.five_carousel.push(item);
     }, 3000);
-    this.carouselActive = false
     },
   },
 };

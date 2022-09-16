@@ -114,9 +114,49 @@
         <div class="model-items find-model">
           <h2>DIDN'T FIND A MODEL?</h2>
           <p>Leave your contact details and we will help you with the choice</p>
-          <input type="text" class="number-input" placeholder="+998-" @keypress="keyIn($event)" v-model="phone_number">
-          <input type="text">
+          <input
+            type="text"
+            class="number-input"
+            placeholder="+998-"
+            @keypress="keyIn($event)"
+            v-model="phone_number"
+          />
+          <input type="text" />
           <button>SEND</button>
+        </div>
+      </div>
+
+      <div class="fourten-mobile-carousel">
+        <div class="mobile-carousel-content">
+          <div class="mobile-transparent"></div>
+          <div class="mobile-carousel-wrapper">
+            
+        
+            <div
+              class="fourten-carousel-items"
+              v-for="slide in fourtenCarousel"
+              :key="slide.id"
+              :id="slide.id"
+              :class="{
+                'fourten-active': slide.id == activeId,
+                'fourten-left': slide.id == activeLeft,
+              }"
+            >
+              <div class="fourten-circle">
+                <img
+                  :src="
+                    require('@/assets/Content/ContentFourten/Models/' +
+                      slide.img +
+                      '.svg')
+                  "
+                  alt=""
+                />
+              </div>
+              <h2>{{ slide.name }}</h2>
+              <p>{{ slide.price }}</p>
+              <button>SEE MORE</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -125,32 +165,102 @@
 <script>
 export default {
   name: "segways-models",
-  data(){
-    return{
-      phone_number: null
-    }
+  data() {
+    return {
+      fourtenCarousel: [
+        {
+          id: 1,
+          img: "image1",
+          name: "NineboT KICKSCOOTER E22",
+          price: "33 900 руб",
+        },
+        {
+          id: 2,
+          img: "image2",
+          name: "NineboT KICKSCOOTER ES1l",
+          price: "33 900 руб",
+        },
+        {
+          id: 3,
+          img: "image3",
+          name: "KS Air t15",
+          price: "$819.99",
+        },
+        {
+          id: 4,
+          img: "image4",
+          name: "KS F30",
+          price: "$649.99",
+        },
+        {
+          id: 5,
+          img: "image5",
+          name: "KS E45",
+          price: "$859.99",
+        },
+        {
+          id: 6,
+          img: "image6",
+          name: "KS MAX",
+          price: "$949.99",
+        },
+        {
+          id: 7,
+          img: "image7",
+          name: "MKS MAX",
+          price: "$949.99",
+        },
+      ],
+      activeId: 1,
+      activeLeft: 1,
+      phone_number: null,
+    };
   },
-  methods:{
-    keyIn(e){
+  mounted() {
+    this.runCarousel();
+  },
+  methods: {
+    runCarousel() {
+      this.activeLeft = this.fourtenCarousel.length;
+      setInterval(() => {
+        let item = this.fourtenCarousel.shift();
+        this.fourtenCarousel.push(item);
+
+        if (this.activeId >= this.fourtenCarousel.length) {
+          this.activeId = 1;
+        } else {
+          this.activeId++;
+        }
+
+        if (this.activeLeft >= this.fourtenCarousel.length) {
+          this.activeLeft = 1;
+        } else {
+          this.activeLeft++;
+        }
+      }, 3000);
+    },
+    keyIn(e) {
       const charCode = e.which ? e.which : e.keyCode;
-      this.phoneIn(e)
-      if(charCode > 31 && (charCode < 48 || charCode > 57) && charCode !== 46){
-        e.preventDefault()
-        
-      }else{
-        if(this.phone_number?.length == 2){
-          this.phone_number = '+' + this.phone_number
+      this.phoneIn(e);
+      if (
+        charCode > 31 &&
+        (charCode < 48 || charCode > 57) &&
+        charCode !== 46
+      ) {
+        e.preventDefault();
+      } else {
+        if (this.phone_number?.length == 2) {
+          this.phone_number = "+" + this.phone_number;
         }
       }
-      
     },
-    phoneIn(evt){
-      let num = evt.target.value
-      if(num && this.phone_number.length == 12){
-        let part = this.phone_number.split("")
-         console.log(part)
+    phoneIn(evt) {
+      let num = evt.target.value;
+      if (num && this.phone_number.length == 12) {
+        let part = this.phone_number.split("");
+        console.log(part);
       }
-    }
-  }
+    },
+  },
 };
 </script>

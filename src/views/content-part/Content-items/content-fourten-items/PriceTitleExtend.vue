@@ -5,9 +5,9 @@
         <p>Add an extended warranty from <i>Extend</i></p>
       </div>
       <div class="extend-input">
-        <input type="text" placeholder="1 Year - $139" />
-        <input type="text" placeholder="2 Year - $209" />
-        <input type="text" placeholder="3 Year - $279" />
+        <button>1 Year <i>$139</i></button>
+        <button>2 Year <i>$209</i></button>
+        <button>3 Year <i>$279</i></button>
       </div>
     </div>
     <div class="price-extend-content">

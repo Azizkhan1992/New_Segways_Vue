@@ -117,7 +117,7 @@
           <input
             type="text"
             class="number-input"
-            placeholder="+998-"
+            placeholder="998  "
             @keypress="keyIn($event)"
             v-model="phone_number"
           />
@@ -240,19 +240,16 @@ export default {
       }, 3000);
     },
     keyIn(e) {
-      const charCode = e.which ? e.which : e.keyCode;
-      this.phoneIn(e);
-      if (
-        charCode > 31 &&
-        (charCode < 48 || charCode > 57) &&
-        charCode !== 46
-      ) {
-        e.preventDefault();
-      } else {
-        if (this.phone_number?.length == 2) {
-          this.phone_number = "+" + this.phone_number;
-        }
-      }
+
+      const pattern = /(\d{0,3})(\d{0,2})(\d{0,3})(\d{0,2})(\d{0,2})/
+            let phone = e.target.value.replace(/\D/g, '').match(pattern)
+            
+            e.target.value = '';
+
+            for (let i = 1; i < 6; i++) {
+                e.target.value += phone[i] != '' ? (i == 1 ? '+' : '-') + phone[i] : '';
+            }
+
     },
     phoneIn(evt) {
       let num = evt.target.value;

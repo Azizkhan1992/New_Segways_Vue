@@ -8409,7 +8409,7 @@ body {
 /* Mini Desctop */
 @media screen and (max-width:960px) and (min-width:768px) {
   .two-slider-container .dot-btn{
-    left: 250px;
+    left: 100px;
   }
 
   .content-seven-container .seven-bottom-item {
@@ -8949,5 +8949,58 @@ body {
   }
   .seven-top .seven-top-item{
     width: 100%;
+  }
+  .header-sidebar-container .sidebar-content{
+    width: 100%;
+  }
+  .sidebar-content .sidebar-items ul li{
+    margin-right: 15px;
+  }
+  .sidebar-content .sidebar-items ul{
+    justify-content: center;
+  }
+  .sidebar-items ul li a{
+    font-size: 0.95rem;
+  }
+  .sidebar-content .sidebar-icons span{
+    font-size: 0.95rem;
+  }
+  .header-title-container .header-title-content{
+    width: 100%;
+  }
+  .content-one-container .one-top-container .one-top-content{
+    width: 100%;
+  }
+  .one-bottom-container .one-bottom-content{
+    width: 100%;
+  }
+  .content-two-container .content-two-content{
+    width: 100%;
+  }
+  .two-left-container .two-left-title a{
+    width: 15%;
+  }
+  .two-slider-container .slider-wrapper .slider-items.active{
+    width: 300px;
+    height: 75%;
+  }
+  .two-slider-container .slider-wrapper .left{
+    width: 300px;
+    height: 75%;
+  }
+  .two-left-container .two-left-title h1{
+    font-size: 4.25rem;
+  }
+  .left-items-container .left-items-title p{
+    font-size: 0.85rem;
+    line-height: 18px;
+  }
+  .left-items-container .left-items-title p .left-item-one{
+    font-size: 0.85rem;
+    line-height: 18px;
+  }
+  .left-items-container .left-items-title .left-item-two{
+    font-size: 0.85rem;
+    line-height: 18px;
   }
 }
